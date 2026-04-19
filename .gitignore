@@ -1,0 +1,15 @@
+.omx/
+build/
+tmp/
+
+# .NET build outputs
+**/bin/
+**/obj/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

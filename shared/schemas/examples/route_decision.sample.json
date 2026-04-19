@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "schema_version": "decision-log-v1",
+    "game_version": "0.1.0.0",
+    "mod_version": "1.0.0.0",
+    "timestamp_utc": "2026-04-19T16:30:00.0000000Z",
+    "session_id": "session_20260419T163000Z_4b4f4b8c",
+    "run_id": "run_20260419T163000Z_5f0c6a2d",
+    "seed": "ABCD1234",
+    "character_id": "character:ironclad",
+    "difficulty_or_ascension": 10,
+    "act_index": 1,
+    "floor_index": 4
+  },
+  "run_state": {
+    "current_hp": 64,
+    "max_hp": 80,
+    "current_hp_ratio": 0.8,
+    "gold": 99,
+    "potion_count": 1,
+    "potion_slots": 3,
+    "current_node_id": "monster_4_2",
+    "current_map_position": {
+      "row": 4,
+      "col": 2
+    },
+    "deck_summary": {
+      "total_cards": 13,
+      "upgraded_cards": 2,
+      "card_ids": [
+        "card:strike",
+        "card:strike",
+        "card:defend",
+        "card:bash"
+      ],
+      "card_counts_by_id": {
+        "card:bash": 1,
+        "card:defend": 1,
+        "card:strike": 2
+      }
+    },
+    "relic_summary": [
+      {
+        "relic_id": "relic:burning_blood",
+        "relic_name": "Burning Blood",
+        "stack_count": 1
+      }
+    ]
+  },
+  "decision_event": {
+    "decision_id": "route_20260419T163000123Z_d4d955f8",
+    "decision_type": "route_decision",
+    "decision_phase": "recommendation_generated",
+    "source_screen": "map_screen",
+    "mode_tag": "balanced",
+    "model_version_or_scorer_version": "route-baseline-v1"
+  },
+  "candidate_options": [
+    {
+      "option_id": "monster_4_2->shop_5_2->rest_6_3->elite_7_3",
+      "payload": {
+        "payload_type": "route_payload",
+        "path_id": "monster_4_2->shop_5_2->rest_6_3->elite_7_3",
+        "node_sequence": [
+          "monster_4_2",
+          "shop_5_2",
+          "rest_6_3",
+          "elite_7_3"
+        ],
+        "node_types": [
+          "monster",
+          "shop",
+          "rest_site",
+          "elite"
+        ],
+        "total_score": 42.5,
+        "risk_score": -6.2,
+        "reward_score": 23.0,
+        "recovery_score": 11.0,
+        "structure_score": 4.0,
+        "reasons": [
+          "金币充足，商店价值较高",
+          "此路径在篝火后挑战精英，准备更充分"
+        ],
+        "style_tag": "balanced"
+      }
+    }
+  ],
+  "recommendation": {
+    "recommended_option_id": "monster_4_2->shop_5_2->rest_6_3->elite_7_3",
+    "secondary_option_id": null,
+    "recommendation_scores": {
+      "monster_4_2->shop_5_2->rest_6_3->elite_7_3": 42.5
+    },
+    "reasons": [
+      "金币充足，商店价值较高",
+      "此路径在篝火后挑战精英，准备更充分"
+    ],
+    "confidence": null
+  },
+  "actual_choice": null,
+  "outcome_snapshot": {
+    "next_combat_damage_taken": null,
+    "survived_next_elite": null,
+    "floors_survived_after_decision": null,
+    "hp_after_n_floors": null,
+    "gold_after_n_floors": null,
+    "notes": null
+  }
+}

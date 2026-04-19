@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>SkAiRouteAdvisor</RootNamespace>
+    <AssemblyName>SkAiRouteAdvisor</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <Sts2GameDir Condition="'$(Sts2GameDir)' == ''">$(STS2_GAME_DIR)</Sts2GameDir>
+    <Sts2DataDir Condition="'$(Sts2DataDir)' == '' and '$(Sts2GameDir)' != ''">$(Sts2GameDir)\data_sts2_windows_x86_64</Sts2DataDir>
+  </PropertyGroup>
+
+  <Target Name="ValidateSts2Path" BeforeTargets="ResolveReferences">
+    <Error Condition="'$(Sts2DataDir)' == ''" Text="Set Sts2GameDir MSBuild property or STS2_GAME_DIR environment variable to your Slay the Spire 2 install path." />
+    <Error Condition="!Exists('$(Sts2DataDir)\sts2.dll')" Text="Could not find sts2.dll under '$(Sts2DataDir)'. Check Sts2GameDir." />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="sts2">
+      <HintPath>$(Sts2DataDir)\sts2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(Sts2DataDir)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="GodotSharp">
+      <HintPath>$(Sts2DataDir)\GodotSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

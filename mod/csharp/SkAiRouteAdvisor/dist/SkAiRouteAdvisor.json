@@ -1,0 +1,11 @@
+{
+  "id": "SkAiRouteAdvisor",
+  "name": "SkAi Route Advisor",
+  "author": "Codex",
+  "description": "Route recommendation MVP for Slay the Spire 2. Current build only boots the mod and prepares the runtime integration boundary.",
+  "version": "0.1.0",
+  "has_pck": false,
+  "has_dll": true,
+  "dependencies": [],
+  "affects_gameplay": true
+}
